@@ -1,0 +1,113 @@
+$W:width;
+$H:height;
+$BG:background;
+$PO:position;
+$PA:absolute;
+$PR:relative;
+$MG:margin;
+$PD:padding;
+$B:border;
+$B-S:box-shadow;
+$B-R:border-radius;
+$C:color;
+$FS:font-size;
+$M-L:margin-left;
+$M-R:margin-right;
+$M-T:margin-top;
+$M-B:margin-bottom;
+$LH:line-height;
+$F:float;
+$FL:left;
+$FR:right;
+$T:top;
+$BM:bottom;
+$OV:overflow;
+$HD:hidden;
+$TE:text-indent;
+
+*{
+    #{$MG}:0;
+    #{$PD}:0;
+}
+
+//混合传参
+@mixin measure($ww,$hh){
+    #{$W}:$ww;
+    #{$H}:$hh;
+}
+
+body{
+    #{$BG}:rgba(0,0,0,.5);
+}
+
+.login{
+    #{$PO}:$PR;
+    #{$OV}:$HD;
+    @include measure(600px,350px);
+    #{$B-S}:0 0 10px #fff;
+    #{$MG}:100px auto;
+    #{$BG}:#fff;
+    #{$B-R}:6px;
+    .l-top{
+        #{$W}:100%;
+        #{$H}:45px;
+        #{$BG}:#f90;
+        .t-left{
+            #{$LH}:45px;
+            #{$C}:#fff;
+            #{$M-L}:18px;
+            #{$FS}:18px;
+        }
+        .t-right{
+            #{$PO}:$PA;
+            #{$FR}:18px;
+            #{$T}:18px;
+            @include measure(15px,15px);
+            #{$BG}:url('../images/close.png') no-repeat -1px -21px;
+            &:hover{
+                #{$BG}:url('../images/close.png') no-repeat -1px -2px;
+            }
+        }
+    }
+    .l-text{
+        @include measure(560px,80px);
+        #{$PD}:0 20px;
+        #{$FS}:14px;
+        #{$LH}:30px;
+        #{$C}:#666;
+        img{
+            #{$PO}:$PA;
+            #{$T}:65px;
+            #{$FL}:20px;
+            #{$W}:40px;
+        }
+        p{
+           #{$M-T}:26px;
+            #{$TE}:45px;
+        }    
+    }
+    .l-bottom{
+        p{
+            #{$M-L}:160px;
+            #{$M-B}:20px;
+            input{
+                @include measure(235px,40px);
+                #{$B-R}:6px;
+                #{$B}:1px solid #ccc;
+            }
+        }
+        .last{
+            input{
+                @include measure(286px,35px);
+                #{$B-R}:6px;
+                #{$C}:#fff;
+                #{$BG}:#3c6;
+                #{$FS}:18px;
+                #{$B}:none;
+            }
+        }
+    }
+}
+
+
+
