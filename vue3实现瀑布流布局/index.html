@@ -71,6 +71,8 @@
     })
     const app = createApp({
       setup() {
+        let nums = location.href.split("?")[1];
+        data.colNums = (nums > 0 && nums < 19)?nums:data.colNums;
         data.childWidth = 100 / data.colNums;
         onMounted(()=>{
           let minIndex = null; // 最低元素序号
