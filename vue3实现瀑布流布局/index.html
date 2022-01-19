@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.26/vue.global.prod.js"></script>
+  <title>瀑布流布局</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    .container{
+      position: relative;
+      width:60%;
+      height:auto;
+      margin:0 auto;
+      border:1px solid red;
+      box-sizing: border-box;
+      list-style:none;
+    }
+    .container > li{
+      position:absolute;
+    }
+    .container > li > span{
+      display:block;
+      width:calc(100% - 10px);
+      height:calc(100% - 10px);
+      margin:5px;
+      border:1px solid red;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <ul class="container" :style="{'height':maxHeight+'px'}">
+      <li v-for="(item,index) in imgList" :key="index" :style="{'top':item.top+'px','left':item.left+'%','width':childWidth+'%','height':item.height+'px'}" >
+        <span></span>
+      </li>
+    </ul>
+  </div>
+  <script>
+    const { createApp, reactive, toRefs ,onMounted } = Vue;
+    const data = reactive({
+      imgList:[
+        {height:300,top:0,left:0},
+        {height:200,top:0,left:0},
+        {height:240,top:0,left:0},
+        {height:100,top:0,left:0},
+        {height:160,top:0,left:0},
+        {height:340,top:0,left:0},
+        {height:310,top:0,left:0},
+        {height:220,top:0,left:0},
+        {height:150,top:0,left:0},
+        {height:90,top:0,left:0},
+        {height:210,top:0,left:0},
+        {height:190,top:0,left:0},
+        {height:270,top:0,left:0},
+        {height:110,top:0,left:0},
+        {height:310,top:0,left:0},
+        {height:230,top:0,left:0},
+        {height:230,top:0,left:0},
+        {height:190,top:0,left:0},
+        {height:260,top:0,left:0},
+      ],
+      maxHeight:0,
+      childWidth:null, 
+      colNums:5, // 列数控制
+    })
+    const app = createApp({
+      setup() {
+        data.childWidth = 100 / data.colNums;
+        onMounted(()=>{
+          let minIndex = null; // 最低元素序号
+          let firstRow = []; // 第一行高度
+          data.imgList.forEach((ele,index)=>{
+            if(index > data.colNums - 1){
+              let min = Math.min(...firstRow);
+              minIndex = firstRow.indexOf(min);
+              firstRow[minIndex] = firstRow[minIndex] + ele.height;
+              ele.top = min;
+              ele.left = (100/data.colNums) * minIndex;
+              data.maxHeight = Math.max(...firstRow);
+            }else{
+              firstRow.push(ele.height);
+              index %= data.colNums;
+              ele.left = (100/data.colNums) * index;
+            }
+          })
+        });
+        return {
+          ...toRefs(data),
+        }
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+</html>
