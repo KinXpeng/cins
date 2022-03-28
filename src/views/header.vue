@@ -1,16 +1,15 @@
 <template>
   <div id="header">
-    <com-time></com-time>
+    <!-- <com-time></com-time> -->
     <com-intro></com-intro>
   </div>
 </template>
 
 <script>
-import comTime from '@/components/time.vue'
 import comIntro from '@/components/intro.vue'
 export default {
   components:{
-    comTime,
+    // comTime,
     comIntro,
   },
   data(){

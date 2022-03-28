@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <header-page></header-page>
+    <!-- <header-page></header-page> -->
     <blog-page ></blog-page>
     <touch-page></touch-page>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 import blogPage from '@/views/blog'
-import headerPage from '@/views/header'
+// import headerPage from '@/views/header'
 import touchPage from '@/views/touch'
 export default {
   name: 'Home',
@@ -19,7 +19,7 @@ export default {
   },
   components: {
     blogPage,
-    headerPage,
+    // headerPage,
     touchPage,
   },
   methods:{

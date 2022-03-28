@@ -1,5 +1,6 @@
 <template>
   <div id="blog">
+    <com-time></com-time>
     <!-- 博客介绍 -->
     <div class="info">
       <div class="logo">
@@ -33,7 +34,11 @@
 </template>
 
 <script>
+import comTime from '@/components/time.vue'
 export default {
+  components:{
+    comTime,
+  },
   data(){
     return {
 
@@ -155,6 +160,12 @@ export default {
       top:160px;
       left:80px;
       z-index:0;
+    }
+  }
+
+  @media (max-width:500px){
+    .info{
+      font-size: 20px;
     }
   }
 }

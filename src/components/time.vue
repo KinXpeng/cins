@@ -107,16 +107,17 @@ export default {
 #time{
   .date{
     width:75%;
-    height:100px;
+    height:auto;
    // border:1px solid red;
     font-size: 40px;
     //padding-top:20px;
-    padding-top:50px;
+    padding:30px 0;
     margin:0 auto;
     .last-date{
       overflow: hidden;
       //line-height: 25px;
       text-indent: 20px;
+      line-height:40px;
       font-weight: 300;
       transition: 2s;
       .time{
@@ -134,6 +135,15 @@ export default {
       width:100%;
       //height:25px;
       height:60px;
+    }
+  }
+  @media (max-width:500px){
+    .date{
+      font-size: 30px;
+      .last-date:nth-child(1){
+        width:100%;
+        max-height:80px;
+      }
     }
   }
 }
