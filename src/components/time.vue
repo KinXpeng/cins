@@ -106,13 +106,13 @@ export default {
 <style lang="less">
 #time{
   .date{
-    //width:500px;
+    width:75%;
     height:100px;
    // border:1px solid red;
     font-size: 40px;
     //padding-top:20px;
     padding-top:50px;
-    padding-left: 100px;
+    margin:0 auto;
     .last-date{
       overflow: hidden;
       //line-height: 25px;
@@ -131,7 +131,7 @@ export default {
     }
     .last-date:nth-child(1){
       //width:300px;
-      width:100vw;
+      width:100%;
       //height:25px;
       height:60px;
     }
