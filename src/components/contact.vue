@@ -179,5 +179,48 @@ export default {
       }
     }
   }
+
+  @media (max-width:500px){
+    .con-item{
+      width:100%;
+      border-right:none;
+    }
+    .con-title{
+      font-size: 16px;
+      height:30px;
+      text-align:center;
+      text-indent: 0;
+      line-height: 30px;
+      font-weight: bold;
+    }
+    .netchat{
+      ul{
+        margin-top:6px;
+        li{
+          font-size: 14px;
+          height:40px;
+          line-height: 40px;
+          &:last-child{
+            border-bottom:1px solid #eee;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .wechat{
+      .chat-code{
+        height:120px;
+        text-align: center;
+        .el-image{
+          margin:10px auto;
+          border:1px solid #fff;
+        }
+        p{
+          text-indent:0;
+        }
+      }
+    }
+  }
 }
+
 </style>

@@ -36,7 +36,7 @@ export default {
   }
   .contact{
     width:100%;
-    height:auto;
+    // height:auto;
     min-height: 400px;
     display: flex;
     width:100%;
@@ -47,5 +47,20 @@ export default {
     width:100%;
     height:100px;
   }
+}
+
+@media (max-width:500px){
+  #touch{
+    .title{
+      font-size: 20px;
+    }
+    .contact{
+      display:block;
+      height:auto;
+      min-height:unset;
+      padding:10px 0;
+    }
+  }
+  
 }
 </style>

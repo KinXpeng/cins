@@ -34,4 +34,9 @@ export default {
 #home{
   min-width: 700px;
 }
+@media (max-width:500px){
+  #home{
+    min-width: unset;
+  }
+}
 </style>

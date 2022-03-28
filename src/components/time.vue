@@ -1,8 +1,8 @@
 <template>
   <div id="time">
     <div class="date">
-      <p class="last-date" ref="lastDate">您上次访问的时间是&nbsp;<span class="time"></span></p>
-      <p class="last-date" ref="nowDate">当前的时间是&nbsp;<span class="time now-time"></span></p>
+      <p class="last-date" ref="lastDate">LAST TIME&nbsp;<span class="time"></span></p>
+      <p class="last-date" ref="nowDate">NOW&nbsp;<span class="time now-time"></span></p>
     </div>
   </div>
 </template>
@@ -60,7 +60,7 @@ export default {
         time = this.getDate();
         if (time!="" && time!=null){
           this.setCookie("lastTime",time,365);
-          this.$refs.lastDate.innerHTML = '欢迎您第一次访问！';
+          this.$refs.lastDate.innerHTML = '欢迎访问！';
         }
       }
     },
@@ -91,7 +91,9 @@ export default {
       lastDate.style.width = '0';
     },5000);
     setTimeout(function(){
-      This.$refs.nowDate.style.marginTop = '-25px';
+      lastDate.style.lineHeight = '0';
+      lastDate.style.height = '0';
+      This.$refs.nowDate.style.marginTop = '-15px';
     },7000);
   },
   destroyed(){
@@ -141,10 +143,12 @@ export default {
   }
   @media (max-width:500px){
     .date{
-      font-size: 30px;
+      text-align: center;
+      font-size: 20px;
+      padding:10px 0;
       .last-date:nth-child(1){
         width:100%;
-        max-height:80px;
+        // max-height:80px;
       }
     }
   }

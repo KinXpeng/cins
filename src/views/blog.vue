@@ -165,7 +165,55 @@ export default {
 
   @media (max-width:500px){
     .info{
-      font-size: 20px;
+      font-size: 16px;
+      .blog{
+        width:100px;
+        height:30px;
+        margin-top:20px;
+        text-align:center;
+        line-height:30px;
+        font-weight:300;
+      }
+    }
+    .intro{
+      position: relative;
+      width:80%;
+      height:230px;
+      margin:0 10%;
+      perspective: 3000px;
+      .intro-blog{
+        position: absolute;
+        width:80%;
+        min-width:unset;
+        max-width: 300px;
+        height:100%;
+        // border:1px solid #fff;
+        border-radius: 4px;
+        background: #fff;
+        transform:rotate(18deg) rotateX(55deg);
+        box-shadow: 20px 20px 40px #000;
+        z-index:2;
+        .intro-img{
+          width:90%;
+          height:80%;
+          margin:8% 5%;
+          box-shadow: 6px 6px 6px #999;
+          img{
+            width:100%;
+            height:100%;
+          }
+        }
+      }
+      .intro-blog.trans2{
+        top:40px;
+        left:20px;
+        z-index:1;
+      }
+      .intro-blog.trans3{
+        top:80px;
+        left:40px;
+        z-index:0;
+      }
     }
   }
 }
