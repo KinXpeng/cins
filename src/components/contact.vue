@@ -186,12 +186,12 @@ export default {
       border-right:none;
     }
     .con-title{
-      font-size: 16px;
+      font-size: 20px;
       height:30px;
       text-align:center;
       text-indent: 0;
       line-height: 30px;
-      font-weight: bold;
+      font-family: "plantc", "Source Han Serif", serif;
     }
     .netchat{
       ul{
