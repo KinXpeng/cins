@@ -111,7 +111,7 @@ export default {
    // border:1px solid red;
     font-size: 40px;
     //padding-top:20px;
-    padding:30px 0;
+    padding:30px 0 10px;
     margin:0 auto;
     .last-date{
       overflow: hidden;
@@ -132,9 +132,11 @@ export default {
     }
     .last-date:nth-child(1){
       //width:300px;
+      overflow: hidden;
       width:100%;
       //height:25px;
-      height:60px;
+      height:40px;
+      margin-bottom:10px;
     }
   }
   @media (max-width:500px){

@@ -63,7 +63,7 @@ export default {
   .info{
     width:70%;
     height:auto;
-    padding:30px 15%;
+    padding:10px 15% 30px;
     font-size:28px;
     .logo{
       width:153px;
