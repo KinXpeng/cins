@@ -4,6 +4,6 @@ module.exports = {
     open: true,
   },
   publicPath: './',
-  outputDir: 'docs', // 输出文件目录(默认dist文件夹)
+  outputDir: 'pages', // 输出文件目录(默认dist文件夹)
   productionSourceMap: false, // 去掉打包后的map文件
 };
