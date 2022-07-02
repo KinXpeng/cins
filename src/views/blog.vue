@@ -3,30 +3,37 @@
     <com-time></com-time>
     <!-- 博客介绍 -->
     <div class="info">
-      <div class="logo">
+      <!-- <div class="logo">
         <img src="../assets/images/treble.png" alt="">
-      </div>
+      </div> -->
       <div class="text">
-        <div class="text-study"><span class="c">“</span>倾倾倾风<span class="c">”</span>是我个人<span class="a">博客</span>，用来将自己所学遇到的一些问题以及解决方法<span class="b">记录</span>下来，来提升和完善自己的<span class="c">专业</span>知识。</div>
-        <div class="text-live">喜欢生活，将学习与生活<span class="d">结合</span>起来，把好的文章也会拿出来分享，让<span class="e">自学</span>的生活充满精彩！</div>
+        <!-- <div class="text-study"><span class="c">“</span>倾倾倾风<span class="c">”</span>是我个人<span class="a">博客</span>，用来将自己所学遇到的一些问题以及解决方法<span class="b">记录</span>下来，来提升和完善自己的<span class="c">专业</span>知识。</div> -->
+        <div class="text-study"><span class="c">Welcome</span> To MyWebsite!</div>
+        <div class="text-study"><span class="b">Here!</span></div>
+        <div class="text-live">You Will <span class="d">See...</span></div>
+        <!-- <div class="text-live">喜欢生活，将学习与生活<span class="d">结合</span>起来，把好的文章也会拿出来分享，让<span class="e">自学</span>的生活充满精彩！</div> -->
       </div>
-      <div class="blog"><a href="https://blog.kinxpeng.com/" target="_blank">浏览博客<i class="el-icon-arrow-right"></i></a></div>
+      <div class="blog">
+        <div class="blog_btn">
+          <a href="https://blog.cins.cc/" target="_blank">浏览博客<i class="el-icon-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
     <!-- 博客展示 -->
     <div class="intro">
       <div class="intro-blog" style="margin-left:0;">
         <div class="intro-img">
-          <img src="../assets/images/blog1.jpg" alt="">
+          <img src="../assets/images/blog1.png" alt="">
         </div>
       </div>
       <div class="intro-blog trans2">
         <div class="intro-img">
-          <img src="../assets/images/blog2.jpg" alt="">
+          <img src="../assets/images/blog2.png" alt="">
         </div>
       </div>
       <div class="intro-blog trans3">
         <div class="intro-img">
-          <img src="../assets/images/blog3.jpg" alt="">
+          <img src="../assets/images/blog3.png" alt="">
         </div>
       </div>
     </div>
@@ -59,25 +66,31 @@ export default {
   background-image: linear-gradient(to right bottom,#000 25%,#480048);
   padding-bottom: 60px;
   overflow: hidden;
+	// font-weight: 300;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
   // 博客介绍
   .info{
     width:70%;
     height:auto;
     padding:10px 15% 30px;
     font-size:28px;
-    .logo{
-      width:153px;
-      height:60px;
-      img{
-        width:153px;
-        height:60px;
-      }
-    }
+    // .logo{
+    //   width:153px;
+    //   height:60px;
+    //   img{
+    //     width:153px;
+    //     height:60px;
+    //   }
+    // }
     .text{
       width:100%;
       height:auto;
       min-height:190px;
       font-weight:300;
+      font-size: 40px;
+      text-align: center;
       span{
         color:transparent;
         background-clip: text;
@@ -104,9 +117,15 @@ export default {
       }
     }
     .blog{
+      width:100%;
+      text-align: center;
+    }
+    .blog_btn{
       width:170px;
+      // width:24%;
+      // margin:0 38%;
       height:50px;
-      margin-top:20px;
+      margin:20px auto 0;
       text-align:center;
       line-height:50px;
       background-image: linear-gradient(to right, #c04848 0%, #480048);
@@ -116,7 +135,7 @@ export default {
         color:#fff;
       }
     }
-    .blog:hover{
+    .blog_btn:hover{
       box-shadow: 0 6px 90px 0 #c04848, 0 8px 60px 0 #480048;
       transform: scale(1.02);
     }
@@ -166,7 +185,7 @@ export default {
   @media (max-width:500px){
     .info{
       font-size: 16px;
-      .blog{
+      .blog_btn{
         width:100px;
         height:30px;
         margin-top:20px;

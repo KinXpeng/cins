@@ -1,8 +1,8 @@
 <template>
   <div id="time">
     <div class="date">
-      <p class="last-date" ref="lastDate">LAST TIME&nbsp;<span class="time"></span></p>
-      <p class="last-date" ref="nowDate">NOW&nbsp;<span class="time now-time"></span></p>
+      <p class="last-date" ref="lastDate">Last Time&nbsp;<span class="time"></span></p>
+      <p class="last-date" ref="nowDate">Now&nbsp;<span class="time now-time"></span></p>
     </div>
   </div>
 </template>
@@ -115,6 +115,7 @@ export default {
     //padding-top:20px;
     padding:30px 0 10px;
     margin:0 auto;
+    text-align: center;
     .last-date{
       overflow: hidden;
       //line-height: 25px;
