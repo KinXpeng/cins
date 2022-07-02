@@ -8,7 +8,7 @@
       </div> -->
       <div class="text">
         <!-- <div class="text-study"><span class="c">“</span>倾倾倾风<span class="c">”</span>是我个人<span class="a">博客</span>，用来将自己所学遇到的一些问题以及解决方法<span class="b">记录</span>下来，来提升和完善自己的<span class="c">专业</span>知识。</div> -->
-        <div class="text-study"><span class="c">Welcome</span> To MyWebsite!</div>
+        <div class="text-study"><span class="c">Welcome</span> To My Website!</div>
         <div class="text-study"><span class="b">Here!</span></div>
         <div class="text-live">You Will <span class="d">See...</span></div>
         <!-- <div class="text-live">喜欢生活，将学习与生活<span class="d">结合</span>起来，把好的文章也会拿出来分享，让<span class="e">自学</span>的生活充满精彩！</div> -->
