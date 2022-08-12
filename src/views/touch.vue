@@ -4,8 +4,8 @@
       <p>想要了解更多？</p>
       <p>你需要的都在这里。</p>
     </div>
-    <com-contact class="contact"></com-contact>
-    <com-copyright class="beian"></com-copyright>
+    <com-contact class="contact" />
+    <com-copyright class="beian" />
   </div>
 </template>
 

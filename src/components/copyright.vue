@@ -1,10 +1,17 @@
 <template>
   <div id="copyright">
     <p class="right-num">
-      <a href="https://beian.miit.gov.cn/#/Integrated/index" target='_blank'>津ICP备17007810号-1</a>
+      <a
+        href="https://beian.miit.gov.cn/#/Integrated/index"
+        target="_blank"
+      >津ICP备17007810号-1</a>
     </p>
-    <p class="right-info">Designed and developed by KinXpeng.</p>
-    <p class="right-info">Copyright&copy;2017-2021 kinxpeng.com. All Rights Reserved.</p>
+    <p class="right-info">
+      Designed and developed by KinXpeng.
+    </p>
+    <p class="right-info">
+      Copyright&copy;2017-2022 cins.cc. All Rights Reserved.
+    </p>
   </div>
 </template>
 

@@ -1,40 +1,59 @@
 <template>
   <div id="contact">
     <div class="netchat con-item">
-      <p class="con-title ">社交网络</p>
+      <p class="con-title ">
+        社交网络
+      </p>
       <ul>
-        <li v-for="(item,index) in this.netData" :key="index"><a :href="item.url" target="_blank">{{item.name}}</a></li>
+        <li
+          v-for="(item,index) in this.netData"
+          :key="index"
+        >
+          <a
+            :href="item.url"
+            target="_blank"
+          >{{ item.name }}</a>
+        </li>
       </ul>
     </div>
     <div class="music con-item">
-      <p class="con-title">音悦视听</p>
+      <p class="con-title">
+        音悦视听
+      </p>
       <div class="music-info">
         <!-- <el-image
           :src="require('../assets/images/music.jpg')"
           @click="musicPlay"
           fit="fill">
         </el-image> -->
-        <div @click="musicPlay" class="music-play"></div>
+        <div
+          @click="musicPlay"
+          class="music-play"
+        />
         <p>也许每个骑士，都要学会等候。</p>
       </div>
-      <p class="music-list">尽享视听：<span>Ease Music</span> | <span>QQ Music</span></p>
+      <p class="music-list">
+        尽享视听：<span>Ease Music</span> | <span>QQ Music</span>
+      </p>
     </div>
     <div class="wechat con-item">
-      <p class="con-title">更多资讯</p>
+      <p class="con-title">
+        更多资讯
+      </p>
       <div class="chat-code">
         <el-image
           style="width: 80px; height: 80px"
           :src="require('../assets/images/wecode.jpeg')"
-          fit="cover">
-        </el-image>
+          fit="cover"
+        />
         <p>交流互动与更多资讯</p>
       </div>
       <div class="chat-code">
         <el-image
           style="width: 80px; height: 80px"
           :src="require('../assets/images/qrcode.jpg')"
-          fit="cover">
-        </el-image>
+          fit="cover"
+        />
         <p>关注最新推送动态</p>
       </div>
     </div>
